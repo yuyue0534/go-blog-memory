@@ -29,3 +29,16 @@
 | POST   | /posts      | 创建文章   |
 | PUT    | /posts/{id} | 更新文章   |
 | DELETE | /posts/{id} | 删除文章   |
+
+**本地测试示例（curl）**
+
+```
+# 创建文章
+curl -X POST http://localhost:8080/posts \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Hello","content":"This is in-memory blog"}'
+
+# 获取文章列表
+curl http://localhost:8080/posts
+
+```
