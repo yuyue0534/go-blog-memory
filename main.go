@@ -42,6 +42,7 @@ func main() {
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"status": "ok",
+			"author":"yuyue3",
 			"time":   time.Now(),
 		})
 	})
@@ -148,3 +149,4 @@ func main() {
 	// 启动服务（Koyeb 关键点）
 	r.Run(":" + port)
 }
+
